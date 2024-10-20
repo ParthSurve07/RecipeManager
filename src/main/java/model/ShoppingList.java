@@ -24,6 +24,14 @@ public class ShoppingList {
         shoppingItems.remove(ingredient);
     }
 
+    public void generateFromRecipes(ArrayList<Recipe> recipes) {
+        for (Recipe recipe : recipes) {
+            for (Ingredient ingredient : recipe.getIngredients()) {
+                shoppingItems.add(ingredient);
+            }
+        }
+    }
+
     public String toString() {
         return "Shopping List: " + shoppingItems.toString();
     }
